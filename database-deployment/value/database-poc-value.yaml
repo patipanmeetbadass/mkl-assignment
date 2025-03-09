@@ -1,0 +1,18 @@
+architecture: replicaset
+image:
+  registry: docker.io
+  repository: bitnami/mongodb
+  tag: 8.0.5-debian-12-r0
+
+# Authentication settings
+auth:
+  enabled: true
+  rootPassword: changeme
+  username: root
+  password: changeme
+  database: db_poc
+
+# Persistent storage settings
+persistence:
+  enabled: true
+  size: 2Gi
