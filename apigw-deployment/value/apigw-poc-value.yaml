@@ -1,0 +1,15 @@
+# Basic values.yaml for Kong for Kubernetes with Kong DB-less
+# Several settings (search for the string "CHANGEME") require user-provided
+# Secrets. These Secrets must be created before installation.
+
+kong: # incase of 'kong' chart as a sub-chart
+  image:
+    repository: kong/kong-gateway
+    tag: "3.5"
+  resources:
+    limits:
+      cpu: 500m
+      memory: 1Gi
+    request:
+      cpu: 250m
+      memory: 512Mi

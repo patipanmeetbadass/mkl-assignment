@@ -1,0 +1,18 @@
+simple-nodejs: # incase of 'simple-nodejs' chart as a sub-chart
+  replicaCount: 2
+  serviceAccount:
+    create: false
+    automount: false
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 5
+    targetCPUUtilizationPercentage: 50
+    targetMemoryUtilizationPercentage: 60
+  resources:
+    limits:
+      cpu: 500m
+      memory: 256Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi

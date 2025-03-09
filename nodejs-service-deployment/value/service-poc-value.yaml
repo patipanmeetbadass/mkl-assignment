@@ -1,0 +1,9 @@
+simple-nodejs: # incase of 'simple-nodejs' chart as a sub-chart
+  replicaCount: 1
+  resources:
+    limits:
+      cpu: 200m
+      memory: 256Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
